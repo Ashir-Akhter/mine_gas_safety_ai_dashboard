@@ -1,0 +1,7 @@
+timestamp,out_path,N,steps,device,seed,duration_s,unsafe_count
+2026-02-21 00:10:21,dataset_2k.npz,2000,400,cuda,42,388.14,846
+2026-02-21 11:14:55,dataset\dataset.npz,1000,400,cuda,42,486.41,410
+2026-02-21 14:25:56,dataset\dataset.npz,1000,400,cuda,42,566.97,410
+2026-02-21 15:27:19,dataset/dataset_part1.npz,1000,400,cuda,42,420.58,0
+2026-02-21 15:35:39,dataset/dataset_part2.npz,1000,400,cuda,42,306.6,0
+2026-02-21 15:41:45,dataset/dataset_part3.npz,1000,400,cuda,42,303.75,0
