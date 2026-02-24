@@ -1,16 +1,107 @@
-# Mining Safety AI Digital Twin (v1)
+# Mining Gas Safety AI Digital Twin
 
-**Short:** GPU-accelerated 2D mining digital twin that simulates gas diffusion in a 64×64 grid (tunnels vs rock), supports domain randomization, generates synthetic datasets and trains a small CNN to classify unsafe scenarios. Includes CPU vs GPU timing for benchmarking and a simple greedy control policy for fan placement.
+GPU-accelerated mining safety simulator + AI risk detector built with PyTorch CUDA.
 
-## Highlights
-- 2D grid simulation with leaks, ventilation fans, and diffusion physics.
-- GPU-accelerated inner loop using `torch.conv2d`.
-- Domain randomization (layouts, leak/fan counts, strengths, diffusion) to generate robust synthetic datasets.
-- Trains a compact CNN (BatchNorm + global average pooling) — fast to train on an RTX laptop.
-- Demo script that compares CPU vs GPU speed, prints max gas and model predictions, and plots a heatmap.
-- Simple greedy fan placement policy (baseline for RL).
+A real-time 2D digital twin that simulates gas diffusion inside underground tunnels, generates synthetic training data via domain randomization, and uses a CNN to classify unsafe gas conditions. Includes a live Streamlit dashboard with automatic alarm alerts.
 
-## Quick start
-1. Create a venv and install:
+---
+
+## Live Demo
+Streamlit App:
+https://aimine.streamlit.app/
+
+Demo video:
+Video on my LinkedIn under projects: https://www.linkedin.com/in/ashir-akhter/details/projects/
+
+---
+
+## Features
+
+### Simulation
+- 2D mine tunnel layout generation
+- Gas diffusion physics
+- Leaks + ventilation fans
+- Domain randomization for synthetic data
+- CPU (NumPy) + GPU (CUDA) implementations
+
+### AI
+- Compact CNN (PyTorch)
+- Binary SAFE vs UNSAFE classification
+- Real-time inference
+- Risk threshold tuning
+
+### Dashboard
+- Live heatmap visualization
+- Probability meter
+- History plot
+- Automatic alarm sound when unsafe
+- Start/Stop/Reset controls
+
+---
+
+## GPU Acceleration
+
+Benchmark on RTX 3050:
+
+| Mode | Time |
+|-------|---------|
+| CPU (NumPy) | 33.3s |
+| GPU (CUDA) | 1.09s |
+
+**30.6Ã— speedup**
+
+The diffusion solver uses:
+- torch.conv2d
+- CUDA tensors
+- cuDNN acceleration
+
+---
+
+## Tech Stack
+
+- Python
+- PyTorch (CUDA/cuDNN)
+- Streamlit
+- NumPy
+- Matplotlib
+
+---
+
+## Run Locally
+
 ```bash
 pip install -r requirements.txt
+streamlit run streamlit_dashboard.py
+```
+
+---
+
+## Project Structure
+
+```
+simulation.py        # CPU + GPU diffusion solvers
+train_model.py       # CNN training
+data_gen.py          # synthetic dataset generation
+streamlit_dashboard.py  # real-time demo
+benchmark.py         # CPU vs GPU speed test
+```
+
+---
+
+## Why This Project?
+
+Designed to demonstrate:
+
+- GPU computing (CUDA)
+- Simulation pipelines
+- Synthetic data generation
+- ML inference systems
+- Real-time visualization
+
+Skills aligned with robotics, simulation, and accelerated computing roles.
+
+---
+
+## Author
+Ashir Akhter
+Computer Science @ York University
