@@ -85,6 +85,9 @@ data_gen.py          # synthetic dataset generation
 streamlit_dashboard.py  # real-time demo
 benchmark.py         # CPU vs GPU speed test
 ```
+## Deployment
+
+Deployed using Docker containers on Oracle Kubernetes Engine with LoadBalancer service.
 
 ---
 
