@@ -1,7 +1,19 @@
+<<<<<<< HEAD
 venv/
 __pycache__/
 *.pt
 *.npz
 *.mp4
 *.csv
+=======
+venv/
+__pycache__/
+.vs/
+*.pem
+ca-toronto-1
+*.pt
+*.npz
+*.mp4
+*.csv
+>>>>>>> ddb38c6 (Added Docker + Kubernetes deployment (OKE) with Streamlit AI app)
 .env

@@ -1,0 +1,28 @@
+# Ignore datasets (BIGGEST FIX)
+dataset/
+dataset_samples/
+*.npz
+
+# Ignore training artifacts
+*.pth
+results.csv
+
+# Ignore media
+*.mp4
+
+# Ignore dev junk
+venv/
+__pycache__/
+*.pyc
+.git
+.gitignore
+
+# Ignore scripts not needed for demo
+benchmark.py
+data_gen.py
+test_cpu.py
+test_gpu.py
+audio_test.py
+merge.py
+demo_video.py
+demo_predict_video.py

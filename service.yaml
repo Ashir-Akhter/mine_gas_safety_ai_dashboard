@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mining-ai-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: mining-ai
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8501
