@@ -7,8 +7,9 @@ A real-time 2D digital twin that simulates gas diffusion inside underground tunn
 ---
 
 ## Live Demo
-Streamlit App:
-https://aimine.streamlit.app/
+Streamlit App:[
+https://aimine.streamlit.app/](http://40.233.75.41/
+)
 
 Demo video:
 Video on my LinkedIn under projects: https://www.linkedin.com/in/ashir-akhter/details/projects/
